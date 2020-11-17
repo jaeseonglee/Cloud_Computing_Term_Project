@@ -1,6 +1,6 @@
 # Cloud_Computing_Term_Project
 
-## 팀 구성원 
+## 팀 구성원
 
 |학과|학번|이름| 
 |-----|----|-----|
@@ -8,7 +8,12 @@
 |빅데이터전공|20165153|이재성|
 |빅데이터전공|20165164|지현한|
 
-----------
+---------------
+#### 기타 사항
+- 대표학생: 이재성
+- 깃허브 주소: https://github.com/jaeseonglee/Cloud_Computing_Term_Project
+
+
 
 ## Term Project
 ---------
@@ -20,3 +25,11 @@
 - __그래서 저희는 AWS Rekognition 서비스를 활용하여 마스크를 쓰지 않은 모습을 확인하고 얼굴을 식별합니다.__
 - __식별된 사람들은 의도적으로 마스크를 쓰지 않은 것으로 판단하여 기록하고 얼굴을 캡처하여 저장합니다.__
 
+### 역할 분담
+- ㄴㄴㄴㄴㄴ
+
+
+
+
+#### 프로그램 코드 링크
+[Term_Project](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CC_Term_Project.py) 
