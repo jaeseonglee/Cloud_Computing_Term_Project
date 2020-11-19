@@ -10,28 +10,31 @@ def detect_faces(photo, bucket):
     client=boto3.client('rekognition')
 
   
-    imageBytes = cv2.imencode(".jpg")
+    #imageBytes = cv2.imencode(".jpg")
 
 
     response = client.detect_protective_equipment(
         Image={
-            "Bytes": imageBytes.tobytes(),
-            "S3Object": {
-                'Bucket': bucket,
-                'Name': photo,
-                'Version': "S3ObjectVersion"
-                }
-            }
-        ,SummarizationAttributes={
-            'MinConfidence': 80,
-            'RequiredEquipmentTypes': [
-                "FACE_COVER"
+            'S3Object':{
+                'Bucket':bucket,
+                'Name':photo}
+            },
+        SummarizationAttributes={
+            'MinConfidence':80,
+            'RequiredEquipmentTypes':[
+                'FACE_COVER'#, 'HAND_COVER', 'HEAD_COVER'
                 ]
             }
         )
 
     
     print('Detected faces for ' + photo)
+    print("\n\n" + str(response))
+
+    
+    
+    
+    
     """
     for faceDetail in response['FaceDetails']:
         print('The detected face is between ' + str(faceDetail['AgeRange']['Low']) 
@@ -42,10 +45,12 @@ def detect_faces(photo, bucket):
     """
 
 def main():
-    photo='detect-analyze-faces-rekognition-sample1.jpg'
-    bucket='rekognition--bucket'
+
+    photo='1111.jpg'
+    bucket='bucket20201117'
+    
     face_count=detect_faces(photo, bucket)
-    print("Faces detected: " + str(face_count))
+    #print("Faces detected: " + str(face_count))
 
 
 if __name__ == "__main__":
