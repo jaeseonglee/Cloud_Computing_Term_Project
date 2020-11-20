@@ -26,11 +26,12 @@
 - __식별된 사람들은 의도적으로 마스크를 쓰지 않은 것으로 판단하여 기록하고 얼굴을 캡처하여 저장합니다.__
 
 #### 사진 분석 및 결과 도출
-프로그램 동작 사진, 사람 사진, 마스크 사람 사진 , 또는 영상?
+프로그램 동작 사진, 사람 사진, 마스크 사람 사진 추가 예정
 
-aws 서비스 내 동작 과정 추가 예정
+
+
 
 
 
 #### 프로그램 코드 링크
-[Term_Project](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CC_Term_Project.py) 
+[Term_Project](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py) 
