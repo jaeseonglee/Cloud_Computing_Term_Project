@@ -30,6 +30,7 @@ def file_split(BoundingBoxs):
 def file_upload(bucket, upload_file):
     s3 = boto3.client('s3')
 
+    
     return s3.upload_file(upload_file, bucket, upload_file)
 
     #매개변수    
@@ -55,7 +56,7 @@ def main():
             print("마스크를 모두 잘 착용중")
         else:
             print("마스크를 착용하지 않은 사람", len(BoundingBoxs), "명 발견")
-            print("사진을 분할하여 저장합니다")
+            print("사진을 분할하여 저장합니다\n\n")
             file_split(BoundingBoxs)
 
 
