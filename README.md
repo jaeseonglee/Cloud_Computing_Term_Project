@@ -32,6 +32,13 @@
 ### 개발내용 소개
 [CC__Project](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
 - 개발에 있어 사용한 언어는 python을 통해 만들었으며 3.7 이상의 버전에서 진행했습니다. 
+
+
+```python
+# 임시 코드
+response = detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+```
+
 - __detect_protective_equipment__ 함수를 통해 Rekognition의 PPE 감지 서비스를 사용합니다. 
 - 함수의 반환값 중 사람이 감지된 영역인 BoundingBox 값과 마스크를 착용 했는지 확인하는 FACE_COVER의 값을 확인합니다.
 
@@ -39,20 +46,18 @@
 - ... //  __image__ 모듈을 사용해서 이미지 자르는 설명..
 !!!!
 
+
+## 개발 결과물 소개 및 실행 결과
 ----------------------------------
-## 프로젝트 개발 결과물 소개 (+ 다이어그램) - (D)
+### 프로젝트 개발 결과물 소개 (+ 다이어그램) - (D)
 
 (다이어그램 그림)
 
 
-## 개발 결과물을 사용하는 방법 소개 - (E)
 
-```python
-# 임시 코드
-response = detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
-```
+### 개발 결과물을 사용하는 방법 소개 - (E)
 
-(+ 프로그램 구동 화면 스크린 샷 첨부)
+(+ 프로그램 idle 이나 cmd 에서 실행하는 스크린 샷 첨부)
 
 
 
