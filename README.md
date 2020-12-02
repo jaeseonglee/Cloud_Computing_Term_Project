@@ -30,12 +30,18 @@
  - 위 사진이 사용된 출처: AWS Rekognition PPE 감지 페이지
 
 ### 개발내용 소개
-[프로그램 코드: CC__Project](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
+[프로그램 코드 링크: CC__Project.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
 
-[결과이미지 다운로드 코드]
+[결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
 
 - 개발에 있어 사용한 언어는 python을 통해 만들었으며 3.7 이상의 버전에서 진행했습니다. 
 
+```
+#사용 모듈
+import boto3
+import from PIL import Image
+```
+- aws 서비스를 사용하기 위한 boto3와 이미지 파일을 다루기 위해 Image 모듈을 사용합니다.
 
 ```python
 # 임시 코드
