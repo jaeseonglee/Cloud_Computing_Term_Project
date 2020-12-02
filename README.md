@@ -87,27 +87,14 @@ detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
 !!!!
 
 
-
-/
-
-/
-
 이미지 감지
 이미지가 맞는지 입력 파일은 jpg와 png만 받는다.
 
 DetectProtectiveEquipment는 이미지에서 감지 된 최대 15 명이 착용 한 PPE를 감지합니다.
-/
 
-/
-
-/
-
-/
-
-/
 ## 개발 결과물 소개 및 실행 결과
 ----------------------------------
-### 프로젝트 개발 결과물 소개 (+ 다이어그램) - (D)
+### 프로젝트 개발 결과 코드 및 다이어그램
 [프로그램 코드 링크: CC__Project.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
 
 [결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
@@ -116,7 +103,7 @@ DetectProtectiveEquipment는 이미지에서 감지 된 최대 15 명이 착용 
 ![alt text](Diagram.jpg)
 
 
-### 개발 결과물을 사용하는 방법 소개 - (E)
+### 개발 결과물을 사용하는 방법 소개 동영상 및 사진
 
 
 1번 프로그램 구동을 하는 것을 첨부터 끝까지 
