@@ -11,7 +11,7 @@
 - python 언어를 통해 프로그램을 만들었으며, 팀 구성원끼리 서로 피드백을 하며 진행함.
 - 기타 사항
     - 대표학생: 이재성
-    - 깃허브 주소: https://github.com/jaeseonglee/Cloud_Computing_Term_Project
+    - 프로젝트 깃허브 주소: https://github.com/jaeseonglee/Cloud_Computing_Term_Project
 
 
 ## 프로젝트 소개 및 개발 내용 소개
@@ -30,7 +30,10 @@
  - 위 사진이 사용된 출처: AWS Rekognition PPE 감지 페이지
 
 ### 개발내용 소개
-[CC__Project](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
+[프로그램 코드: CC__Project](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
+
+[결과이미지 다운로드 코드]
+
 - 개발에 있어 사용한 언어는 python을 통해 만들었으며 3.7 이상의 버전에서 진행했습니다. 
 
 
