@@ -36,7 +36,7 @@
 
 - 개발에 있어 사용한 언어는 python을 통해 만들었으며 3.7 이상의 버전에서 진행했습니다. 
 
-```
+```python
 #사용 모듈
 import boto3
 import from PIL import Image
@@ -45,10 +45,33 @@ import from PIL import Image
 
 ```python
 # 임시 코드
-response = detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
 ```
-
 - __detect_protective_equipment__ 함수를 통해 Rekognition의 PPE 감지 서비스를 사용합니다. 
+
+
+
+```
+{
+    "Image": {
+        "S3Object": {
+            "Bucket": "bucket",
+            "Name": "worker.jpg"
+        }
+    },
+    "SummarizationAttributes": {
+        "MinConfidence": 80,
+        "RequiredEquipmentTypes": [
+            "FACE_COVER",
+            "HAND_COVER",
+            "HEAD_COVER"
+        ]
+    }
+}
+```
+- PPE 감지 서비스의 응답 내역 중 하나로 보호 장비가 감지되면 RequiredEquipmentTypes으로 우엇이 감지되었는지를 반환합니다.
+
+
 - 함수의 반환값 중 사람이 감지된 영역인 BoundingBox 값과 마스크를 착용 했는지 확인하는 FACE_COVER의 값을 확인합니다.
 
 -
