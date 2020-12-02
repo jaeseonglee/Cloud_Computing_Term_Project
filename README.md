@@ -51,7 +51,7 @@ response = detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name'
 ----------------------------------
 ### 프로젝트 개발 결과물 소개 (+ 다이어그램) - (D)
 
-(다이어그램 그림)
+![alt text](Diagram.jpg)
 
 
 
