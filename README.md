@@ -8,6 +8,11 @@
 |컴퓨터공학과|20165147|유병학|영상처리 프로그래밍|
 |빅데이터전공|20165153|이재성|DB 관리 및 오류 수정|
 |빅데이터전공|20165164|지현한|Rekoginition 서비스 활용 프로그래밍|
+
+
+# 담당 파트 수정
+
+
 - python 언어를 통해 프로그램을 만들었으며, 팀 구성원끼리 서로 피드백을 하며 진행함.
 - 기타 사항
     - 대표학생: 이재성
@@ -18,6 +23,9 @@
 ---------
 ### 프로젝트 소개
 - __AWS Rekognition 서비스를 활용하여 사람의 마스크 착용 여부를 확인하고, 미착용 시 얼굴을 저장하는 프로젝트입니다.__
+
+ - 사람을 저장한다.
+
 
 - 저희는 AWS Rekognition 서비스 중 PPE(개인 보호 장비)를 감지하는 서비스를 활용하여 프로그램을 개발했습니다.
     - PPE 감지는 기본적으로 사람을 감지하는 것과 동시에 그 사람이 장갑,헬멧,보호 마스크와 같은 보호장비를 감지하는데 사용합니다.
@@ -30,9 +38,7 @@
  - 위 사진이 사용된 출처: AWS Rekognition PPE 감지 페이지
 
 ### 개발내용 소개
-[프로그램 코드 링크: CC__Project.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
 
-[결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
 
 - 개발에 있어 사용한 언어는 python을 통해 만들었으며 3.7 이상의 버전에서 진행했습니다. 
 
@@ -86,6 +92,10 @@ detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
 
 /
 
+이미지 감지
+이미지가 맞는지 입력 파일은 jpg와 png만 받는다.
+
+DetectProtectiveEquipment는 이미지에서 감지 된 최대 15 명이 착용 한 PPE를 감지합니다.
 /
 
 /
@@ -98,18 +108,27 @@ detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
 ## 개발 결과물 소개 및 실행 결과
 ----------------------------------
 ### 프로젝트 개발 결과물 소개 (+ 다이어그램) - (D)
+[프로그램 코드 링크: CC__Project.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
+
+[결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
+
 
 ![alt text](Diagram.jpg)
 
 
-
 ### 개발 결과물을 사용하는 방법 소개 - (E)
 
-어떤 사진을 넣어야 하는가?
 
-(+ 프로그램 idle 이나 cmd 에서 실행하는 스크린 샷 첨부)
+1번 프로그램 구동을 하는 것을 첨부터 끝까지 
+
+2번 사진이 
+
+동영상
 
 
+입력 이미지
+잘린 이미지
+aws S3 버킷화면을 보여줌
 
 
 
