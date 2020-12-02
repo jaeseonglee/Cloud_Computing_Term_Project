@@ -100,7 +100,7 @@ DetectProtectiveEquipment는 이미지에서 감지 된 최대 15 명이 착용 
 [결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
 
 
-![alt text](Diagram.jpg)
+![alt text](Diagram.png)
 
 
 ### 개발 결과물을 사용하는 방법 소개 동영상 및 사진
