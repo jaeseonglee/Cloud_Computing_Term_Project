@@ -41,8 +41,8 @@ import from PIL import Image
 - aws 서비스를 사용하기 위한 boto3와 이미지 파일을 다루기 위해 Image 모듈을 사용합니다.
 
 ```python
-detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}},
-SummarizationAttributes={'MinConfidence':80, 'RequiredEquipmentTypes':['FACE_COVER']})
+detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}},             
+    SummarizationAttributes={'MinConfidence':80, 'RequiredEquipmentTypes':['FACE_COVER']})
 ```
 - __detect_protective_equipment__ 함수를 통해 Rekognition의 PPE 감지 서비스를 사용합니다. 
 
