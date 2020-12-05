@@ -91,7 +91,7 @@ croppedImage.save(image_file_name)
 
 file_upload(bucket, image_file_name)
 ```
-- 분할된 이미지는 로컬 컴퓨터와 bucket에 각각 저장하며 마무리한다.
+- 분할된 이미지는 로컬 컴퓨터와 bucket에 각각 저장한다.
 
 ## 개발 결과물 소개 및 실행 결과
 ----------------------------------
@@ -106,6 +106,7 @@ file_upload(bucket, image_file_name)
 - 위 사진에 대해 분석 실행
 - (사진 출처 : 대한민국 정부 홈페이지)
 
+#### IDLE에서 코드를 실행한 모습
 ![object1_detecting](object1_detecting.png)
 
 #### 검출되어 분할된 이미지
