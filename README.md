@@ -69,6 +69,8 @@ for i in range(len(response['Persons'])):
 
 ![alt text](mask_2_detected.png)
 
+![alt text](mask_2_BoundingBox.png)
+
 - 해당 이미지에서  __Persons__ 이 검출된 영역과 __FACE_COVER__ 가 검출된 영역을 확인
 
 - (사진 출처 : https://m.health.chosun.com/svc/news_view.html?contid=2020021203075)
