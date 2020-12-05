@@ -24,7 +24,7 @@
 
 - 저희를 여기서 보호 마스크를 감지하는 것에서 아이디어를 얻었습니다. 아래와 같이 사람들의 일반 마스크 착용 여부도 확인할 수 있다는 것을 알아내고, 이를 활용하여 마스크 인식 프로젝트를 만들게 되었습니다.
 
-![PPE_mask.png](PPE_mask.png)
+![PPE_mask](PPE_mask.png)
 
  - (원본 사진 출처: 이재성)
  - (위 사진이 사용된 출처: AWS Rekognition PPE 감지 페이지)
@@ -65,7 +65,7 @@ for i in range(len(response['Persons'])):
 
 - 위의 두가지 조건문에 해당하지 않은 사람이면 마스크 착용중인 것으로 인식한다.
 
-![mask_2_BoundingBox.png](mask_2_BoundingBox.png)
+![mask_2_BoundingBox](mask_2_BoundingBox.png)
 
 - 해당 이미지에서  __Persons__ 이 검출된 영역과 __FACE_COVER__ 가 검출된 영역을 확인
 
@@ -90,10 +90,10 @@ image.crop((x1,y1,x2,y2))
 
 [결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
 
-![Diagram.png](Diagram.png)
+![Diagram](Diagram.png)
 
 ### 개발 결과물을 사용하는 방법 - 동영상
-![(object1.png](object1.png)
+![(object1](object1.png)
 - 위 사진에 대해 분석 실행
 - (사진 출처 : 대한민국 정부 홈페이지)
 
@@ -103,9 +103,9 @@ image.crop((x1,y1,x2,y2))
 q 하고 나깔때까지를 보여줌)
 
 
-![cc_image.png](cc_image.png){: width="50%" height="50%"}
+<img src="cc_image.png" alt="cc_image" width="50%" height="50%"/><img src="cc_result.png" alt="cc_result" width="50%" height="50%"/>
 
-![cc_result.png](cc_result.png){: width="50%" height="50%"}
+
 
 ### 사진 검출 결과
 
