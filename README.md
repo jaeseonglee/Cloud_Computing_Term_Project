@@ -117,7 +117,7 @@ aws S3 버킷화면을 보여줌
 
 #### 사진 분석 및 결과 도출
 
-![alt text](Object_1).png)
+![alt text](object1.png)
 
 
 마스크 미착용 사람 사진,
