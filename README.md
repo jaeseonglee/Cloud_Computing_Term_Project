@@ -41,27 +41,45 @@ import from PIL import Image
 - aws 서비스를 사용하기 위한 boto3와 이미지 파일을 다루기 위해 Image 모듈을 사용합니다.
 
 ```python
-detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}}, SummarizationAttributes={'MinConfidence':80, 'RequiredEquipmentTypes':['FACE_COVER']})
 ```
 - __detect_protective_equipment__ 함수를 통해 Rekognition의 PPE 감지 서비스를 사용합니다. 
 
 - 함수의 반환값 중에는 EquipmentDetections 가 있는데 __FACE_COVER, HAND_COVER, HEAD_COVER__ 중 __FACE_COVER__ 타입 유무를 확인해서 마스크 착용 여부를 판단합니다.
 
 ```python
+BoundingBoxs = []   #사진에서 마스크를 쓰지 않은 사람들의 위치값들
 for i in range(len(response['Persons'])):
         if(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"] == []):   
-            BoundingBoxs.append(response['Persons'][i]['BoundingBox'])
+            BoundingBoxs.append(response['Persons'][i]['BoundingBox']) #마스크 탐지 안됨
         elif(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"][0]["CoversBodyPart"]["Value"] == False): 
             BoundingBoxs.append(response['Persons'][i]['BoundingBox'])
+            #마스크를 제대로 착용하지 않음
 ```
 - 함수에서 받은 반환값 중에서 __Persons__이 있다면 사람이 감지되었음.
 
-- 사람을 감지한 영역인 __BoundingBox__내에서 __FACE_COVER__ 
+- 사람을 감지한 영역인 __BoundingBox__내에서 EquipmentDetections가 없다면 그 영역을 검출
 
+- 마스크 착용은 했지만 올바르지 않은 착용인 모습이면(ex) 코스크, 턱스크) 검출
+
+- 위의 두가지 조건문에 해당하지 않은 사람이면 마스크 착용중인것으로 확인
 
 ```python
+size = image.size
+
+x1 = size[0] * BoundingBox['Left']
+y1 = size[1] * BoundingBox['Top']
+x2 = x1 + size[0] * BoundingBox['Width']
+y2 = y1 + size[1] * BoundingBox['Height']
+
 image.crop((x1,y1,x2,y2))
 ```
+- 기존 입력된 이미지에서 __BoundingBox__ 의 좌표값의 이미지로 잘라주는 함수인 __crop__을 이용하여 이미지를 영상처리한다.
+
+![alt text](mask_2.png)
+
+![alt text](mask_2_detected.png)
+(사진 출처 : https://m.health.chosun.com/svc/news_view.html?contid=2020021203075)
 
 
 ## 개발 결과물 소개 및 실행 결과
@@ -94,7 +112,7 @@ aws S3 버킷화면을 보여줌
 
 
 #### 사진 분석 및 결과 도출
-//https://m.health.chosun.com/svc/news_view.html?contid=2020021203075
+
 마스크 미착용 사람 사진,
 사람의 크기만 자른 사진 
 
