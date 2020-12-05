@@ -98,19 +98,18 @@ file_upload(bucket, image_file_name)
 ### 프로젝트 개발 결과 코드 및 다이어그램
 [프로그램 코드 링크:mask_detected_program.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
 
-[결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
-
 ![Diagram](Diagram.png)
 
 ### 개발 결과물 및 사진 검출 결과
-![object1](object1.png)
+<img src="object1.png" alt="object1" width="50%" height="50%"/>
+
 - 위 사진에 대해 분석 실행
 - (사진 출처 : 대한민국 정부 홈페이지)
 
 ![object1_detecting](object1_detecting.png)
 
 #### 검출되어 분할된 이미지
-<img src="object1_Det1.png" alt="object1_Det1" width="50%" height="50%"/><img src="object1_Det2.png" alt="object1_Det2" width="50%" height="50%"/>
+<img src="object1_Det1.png" alt="object1_Det1" width="30%" height="30%"/><img src="object1_Det2.png" alt="object1_Det2" width="30%" height="30%"/>
 
 #### 버킷에 저장된 이미지
 <img src="cc_image.png" alt="cc_image" width="50%" height="50%"/><img src="cc_result.png" alt="cc_result" width="50%" height="50%"/>
