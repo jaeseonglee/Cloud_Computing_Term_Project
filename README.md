@@ -31,7 +31,6 @@
 
 ### 개발내용 소개
 
-
 - 개발에 있어 사용한 언어는 python을 통해 만들었으며 3.7 이상의 버전에서 진행했습니다. 
 
 ```python
@@ -47,28 +46,29 @@ detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
 ```
 - __detect_protective_equipment__ 함수를 통해 Rekognition의 PPE 감지 서비스를 사용합니다. 
 
+- 함수의 반환값 중에는 EquipmentDetections 가 있는데 __FACE_COVER, HAND_COVER, HEAD_COVER__ 중 __FACE_COVER__ 타입 유무를 확인해서 마스크 착용 여부를 판단합니다.
+
+
+
+
+//https://m.health.chosun.com/svc/news_view.html?contid=2020021203075
+
+
+
 ```python
 for i in range(len(response['Persons'])):
-        if(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"] == []):    #마스크 탐지 안됨
+        if(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"] == []):   
             BoundingBoxs.append(response['Persons'][i]['BoundingBox'])
-        elif(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"][0]["CoversBodyPart"]["Value"] == False): #마스크를 제대로 착용하지 않음
+        elif(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"][0]["CoversBodyPart"]["Value"] == False): 
             BoundingBoxs.append(response['Persons'][i]['BoundingBox'])
 ```
-
+- 
 
 ```python
 
 image.crop((x1,y1,x2,y2))
 ```
 
-
-
-
-
-이미지 감지
-이미지가 맞는지 입력 파일은 jpg와 png만 받는다.
-
-DetectProtectiveEquipment는 이미지에서 감지 된 최대 15 명이 착용 한 PPE를 감지합니다.
 
 ## 개발 결과물 소개 및 실행 결과
 ----------------------------------
@@ -110,4 +110,3 @@ aws S3 버킷화면을 보여줌
     - 마스크 의무화에 반하는 사람들을 신고함에 따라 벌금형이 주어집니다.
     - 위 프로그램의 결과를 통해 그 사람들의 얼굴과 인상착의를 저장하는 확실한 증거로 사용될 것입니다.
      
-
