@@ -20,6 +20,9 @@ def detect_masks(photo, bucket):
 
 #사진을 분할하는 함수
 def file_split(image_file, BoundingBoxs):
+    file_extension = image_file[-4:]
+       
+        
     image = Image.open(image_file)
     
     bucket = 'cc--result'   #마스크를 안쓴사람들을 모은 버킷
@@ -49,7 +52,7 @@ def file_split(image_file, BoundingBoxs):
         croppedImage = image.crop((x1,y1,x2,y2))
 
         #사진 저장
-        image_file_name = image_file[:-4] + "_Det" +str(num) + ".jpg"
+        image_file_name = image_file[:-4] + "_Det" +str(num) + file_extension
         croppedImage.save(image_file_name)
 
         file_upload(bucket, image_file_name)
