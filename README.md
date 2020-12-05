@@ -86,7 +86,7 @@ image.crop((x1,y1,x2,y2))
 ## 개발 결과물 소개 및 실행 결과
 ----------------------------------
 ### 프로젝트 개발 결과 코드 및 다이어그램
-[프로그램 코드 링크: CC__Project.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
+[프로그램 코드 링크:mask_detected_program.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/CloudComputing_project.py)
 
 [결과이미지 다운로드 코드 링크: Download_result.py](https://github.com/jaeseonglee/Cloud_Computing_Term_Project/blob/main/Download_result.py)
 
