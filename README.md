@@ -84,6 +84,15 @@ image.crop((x1,y1,x2,y2))
 ```
 - 입력된 이미지에서 __BoundingBox__ 의 좌표값을 가지고 __crop__ 을 이용하여 이미지를 분할한다.
 
+```python
+#사진 저장
+image_file_name = image_file[:-4] + "_Det" +str(num) + file_extension
+croppedImage.save(image_file_name)
+
+file_upload(bucket, image_file_name)
+```
+- 분할된 이미지는 로컬 컴퓨터와 bucket에 각각 저장하며 마무리한다.
+
 ## 개발 결과물 소개 및 실행 결과
 ----------------------------------
 ### 프로젝트 개발 결과 코드 및 다이어그램
@@ -93,27 +102,18 @@ image.crop((x1,y1,x2,y2))
 
 ![Diagram](Diagram.png)
 
-### 개발 결과물을 사용하는 방법 - 동영상
-![(object1](object1.png)
+### 개발 결과물 및 사진 검출 결과
+![object1](object1.png)
 - 위 사진에 대해 분석 실행
 - (사진 출처 : 대한민국 정부 홈페이지)
 
- 동영상
-(IDLE 실행창으로
-프로그램 구동 스크린 샷을 찍어서 옮긴다.
-q 하고 나깔때까지를 보여줌)
+![object1_detecting](object1_detecting.png)
 
+#### 검출되어 분할된 이미지
+<img src="object1_Det1.png" alt="object1_Det1" width="50%" height="50%"/><img src="object1_Det2.png" alt="object1_Det2" width="50%" height="50%"/>
 
+#### 버킷에 저장된 이미지
 <img src="cc_image.png" alt="cc_image" width="50%" height="50%"/><img src="cc_result.png" alt="cc_result" width="50%" height="50%"/>
-
-
-
-### 사진 검출 결과
-
-결과 사진 
-
-
-
 
 ## 개발 결과물의 필요성 및 활용방안
 - SW의 필요성
