@@ -26,8 +26,8 @@
 
 ![alt text](PPE_mask.png)
 
- - 원본 사진 출처: 이재성
- - 위 사진이 사용된 출처: AWS Rekognition PPE 감지 페이지
+ - (원본 사진 출처: 이재성)
+ - (위 사진이 사용된 출처: AWS Rekognition PPE 감지 페이지)
 
 ### 개발내용 소개
 
@@ -41,19 +41,11 @@ import from PIL import Image
 - aws 서비스를 사용하기 위한 boto3와 이미지 파일을 다루기 위해 Image 모듈을 사용합니다.
 
 ```python
-
 detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
 ```
 - __detect_protective_equipment__ 함수를 통해 Rekognition의 PPE 감지 서비스를 사용합니다. 
 
 - 함수의 반환값 중에는 EquipmentDetections 가 있는데 __FACE_COVER, HAND_COVER, HEAD_COVER__ 중 __FACE_COVER__ 타입 유무를 확인해서 마스크 착용 여부를 판단합니다.
-
-
-
-
-//https://m.health.chosun.com/svc/news_view.html?contid=2020021203075
-
-
 
 ```python
 for i in range(len(response['Persons'])):
@@ -62,10 +54,12 @@ for i in range(len(response['Persons'])):
         elif(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"][0]["CoversBodyPart"]["Value"] == False): 
             BoundingBoxs.append(response['Persons'][i]['BoundingBox'])
 ```
-- 
+- 함수에서 받은 반환값 중에서 __Persons__이 있다면 사람이 감지되었음.
+
+- 사람을 감지한 영역인 __BoundingBox__내에서 __FACE_COVER__ 
+
 
 ```python
-
 image.crop((x1,y1,x2,y2))
 ```
 
@@ -93,11 +87,14 @@ image.crop((x1,y1,x2,y2))
 
 입력 이미지
 잘린 이미지
+
+
 aws S3 버킷화면을 보여줌
 
 
 
 #### 사진 분석 및 결과 도출
+//https://m.health.chosun.com/svc/news_view.html?contid=2020021203075
 마스크 미착용 사람 사진,
 사람의 크기만 자른 사진 
 
