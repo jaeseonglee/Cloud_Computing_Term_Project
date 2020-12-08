@@ -36,7 +36,7 @@
 ```python
 #사용 모듈
 import boto3
-import from PIL import Image
+from PIL import Image
 ```
 - aws 서비스를 사용하기 위한 boto3와 이미지 파일을 다루기 위해 Image 모듈을 사용합니다.
 
