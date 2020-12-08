@@ -51,12 +51,15 @@ detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}},
 
 ```python
 BoundingBoxs = []   #사진에서 마스크를 쓰지 않은 사람들의 위치값들
+
 for i in range(len(response['Persons'])):
+        #마스크 탐지 안됨
         if(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"] == []):   
-            BoundingBoxs.append(response['Persons'][i]['BoundingBox']) #마스크 탐지 안됨
+            BoundingBoxs.append(response['Persons'][i]['BoundingBox']) 
+
+        #마스크를 제대로 착용하지 않음
         elif(response['Persons'][i]['BodyParts'][0]["EquipmentDetections"][0]["CoversBodyPart"]["Value"] == False): 
             BoundingBoxs.append(response['Persons'][i]['BoundingBox'])
-            #마스크를 제대로 착용하지 않음
 ```
 - 함수에서 받은 반환값 중에서 __Persons__ 이 있다면 사람이 감지되었음.
 
@@ -124,4 +127,3 @@ file_upload(bucket, image_file_name)
     - 마스크 의무화에 반하는 사람들을 신고함에 따라 벌금형이 주어집니다.
     - 위 프로그램을 이용하여 해당 인원들의 얼굴과 인상착의를 저장하며, 벌금을 부여할 시 마스크 착용여부를 판별할 수 있는 확실한 증거로 사용될 것입니다.
      
-
