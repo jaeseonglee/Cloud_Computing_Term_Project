@@ -111,8 +111,7 @@ file_upload(bucket, image_file_name)
 ![object1_detecting](object1_detecting.png)
 
 #### 검출되어 분할된 이미지
-<img src="object1_Det1.png" alt="object1_Det1" width="30%" height="30%"/>
- object1_Det1.png <img src="object1_Det2.png" alt="object1_Det2" width="30%" height="30%"/>object1_Det2.png
+<img src="object1_Det1.png" alt="object1_Det1" width="30%" height="30%"/> object1_Det1.png<img src="object1_Det2.png" alt="object1_Det2" width="30%" height="30%"/>object1_Det2.png
 
 #### 버킷에 저장된 이미지
 <img src="cc_image.png" alt="cc_image" width="50%" height="50%"/><img src="cc_result.png" alt="cc_result" width="50%" height="50%"/>
