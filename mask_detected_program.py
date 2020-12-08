@@ -1,5 +1,6 @@
 import boto3
 from PIL import Image
+from os.path import getsize
 
 #사진에서 마스크를 탐지하는 함수, BoundingBoxs를 리턴
 def detect_masks(photo, bucket):
@@ -82,6 +83,12 @@ def main():
                 print("확장자명 오류")
                 print(".jpg .png 파일만 가능합니다. ")
                 continue
+
+            #Rekognition PPE가 4MB미만의 파일만 허용한다
+            if(getsize(image_file) >= 4194304):
+                print("사진 파일의 크기가 4MB가 넘습니다.")
+                continue
+                
 
             #버킷에 중복된 파일명이 있는지 검사
             close = False

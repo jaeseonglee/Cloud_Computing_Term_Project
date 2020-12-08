@@ -37,8 +37,10 @@
 #사용 모듈
 import boto3
 from PIL import Image
+from os.path import getsize
 ```
-- aws 서비스를 사용하기 위한 boto3와 이미지 파일을 다루기 위해 Image 모듈을 사용합니다.
+- aws 서비스를 사용하기 위한 boto3와 이미지 파일을 다루기 위해 Image를  사용합니다.
+- 파일의 크기를 확인하기 위해 os.path 모듈의 getsize를 사용합니다.
 
 ```python
 detect_protective_equipment(Image={'S3Object':{'Bucket':bucket,'Name':photo}},
