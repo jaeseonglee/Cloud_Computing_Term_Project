@@ -103,6 +103,7 @@ file_upload(bucket, image_file_name)
 ### 개발 결과물 및 사진 검출 결과
 <img src="object1.png" alt="object1" width="50%" height="50%"/>
 
+#### object1.png
 - 위 사진에 대해 분석 실행
 - (사진 출처 : 대한민국 정부 홈페이지)
 
@@ -110,7 +111,11 @@ file_upload(bucket, image_file_name)
 ![object1_detecting](object1_detecting.png)
 
 #### 검출되어 분할된 이미지
-<img src="object1_Det1.png" alt="object1_Det1" width="30%" height="30%"/><img src="object1_Det2.png" alt="object1_Det2" width="30%" height="30%"/>
+<img src="object1_Det1.png" alt="object1_Det1" width="30%" height="30%"/>
+ - object1_Det1.png
+
+<img src="object1_Det2.png" alt="object1_Det2" width="30%" height="30%"/>
+- object1_Det2.png
 
 #### 버킷에 저장된 이미지
 <img src="cc_image.png" alt="cc_image" width="50%" height="50%"/><img src="cc_result.png" alt="cc_result" width="50%" height="50%"/>
@@ -121,5 +126,6 @@ file_upload(bucket, image_file_name)
     - 의도적으로 마스크를 착용하지 않는 사람들에게 경각심을 심어주기 위해서, 사용할 필요성이 있다고 생각합니다.
 - 활용방안
     - 마스크 의무화에 반하는 사람들을 신고함에 따라 벌금형이 주어집니다.
-    - 위 프로그램의 결과를 통해 그 사람들의 얼굴과 인상착의를 저장하는 확실한 증거로 사용될 것입니다.
+    - 위 프로그램을 이용하여 해당 인원들의 얼굴과 인상착의를 저장하며, 벌금을 부여할 시 마스크 착용여부를 판별할 수 있는 확실한 증거로 사용될 것입니다.
      
+
